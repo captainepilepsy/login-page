@@ -1,0 +1,28 @@
+{
+  "name": "login-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/captainepilepsy/login-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/captainepilepsy/login-page/issues"
+  },
+  "homepage": "https://github.com/captainepilepsy/login-page#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.43.1",
+    "@types/node": "^20.12.7"
+  },
+  "dependencies": {
+    "playwright": "^1.43.1",
+    "typescript": "^5.4.5"
+  }
+}
