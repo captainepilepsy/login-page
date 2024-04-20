@@ -3,7 +3,7 @@ import { devices, defineConfig } from '@playwright/test';
 export default defineConfig({
   testDir: 'src/tests',
   fullyParallel: true,
-  reporter: 'html',
+  reporter: 'list',
   timeout: 60000,
   use: {
     baseURL: 'https://the-internet.herokuapp.com',
