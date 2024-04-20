@@ -6,7 +6,7 @@ export default defineConfig({
   reporter: 'html',
   timeout: 60000,
   use: {
-    baseURL: 'https://the-internet.herokuapp.com/login',
+    baseURL: 'https://the-internet.herokuapp.com',
     headless: true,
     screenshot: 'only-on-failure',
   },

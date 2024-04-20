@@ -1,5 +1,4 @@
 import { Page, Locator } from '@playwright/test'
-import { lcov } from 'node:test/reporters'
 
 export class SecurePage {
   readonly page: Page
