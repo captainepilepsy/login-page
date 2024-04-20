@@ -16,4 +16,16 @@ export class LoginPage {
     this.passwordInput = page.getByLabel('Password') 
     this.loginButton = page.getByRole('button', { name: ' Login' })
   }
+  async login(username: string, password: string) {
+    await this.usernameInput.fill(username)
+    await this.passwordInput.fill(password)
+    await this.loginButton.click()
+  }
+  async loginContent() {
+    await this.loginInstructions.isVisible()
+    await this.pageTitle.isVisible()
+    await this.usernameInput.isVisible()
+    await this.passwordInput.isVisible()
+    await this.loginButton.isVisible()   
+  }
 }
