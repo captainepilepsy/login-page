@@ -9,6 +9,7 @@ export default defineConfig({
     baseURL: 'https://the-internet.herokuapp.com',
     headless: true,
     screenshot: 'only-on-failure',
+    trace: 'on-first-retry',
   },
   
   projects: [
