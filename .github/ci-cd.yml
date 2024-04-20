@@ -1,0 +1,21 @@
+name: Playwright E2E Tests
+  push:
+    branches:
+      - main
+
+job:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Install dependencies
+        run: npm install
+      - name: install Browsers
+        run: npx playwright install
+      - name: Run Playwright Tests
+        run: npx playwright test
+        
