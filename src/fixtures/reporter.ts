@@ -1,4 +1,4 @@
-import type { FullConfig, FullResult, Reporter, Suite, TestCase, TestResult } from '@playwright/test/reporter'
+import type { FullConfig, FullResult, Reporter, Suite, TestCase, TestResult } from '@playwright/test/reporter';
 
 class CustomReporter implements Reporter {
   onBegin(config: FullConfig, suite: Suite) {
@@ -6,12 +6,19 @@ class CustomReporter implements Reporter {
   }
 
   onTestEnd(test: TestCase, result: TestResult) {
-    console.log(`Finished ${test.title} with ${result.status}`);
+    console.log(`Finished test ${test.title}: ${result.status}`);
+
+    // **Debugging Addition: Error Handling**
+    try {
+      // Add your specific reporting logic here, potentially with error-prone operations
+    } catch (error) {
+      console.error(`Error during reporting for test ${test.title}:`, error);
+    }
   }
-  
+
   onEnd(result: FullResult) {
-    console.log(`Finished the run: ${result.status}`)
+    console.log(`Finished the run: ${result.status}`);
   }
 }
 
-export default CustomReporter
+export default CustomReporter;
